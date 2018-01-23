@@ -1,0 +1,14 @@
+version: '3'
+services:
+  persistence-courses-app:
+    build: ./src/
+    ports:
+    - "9020:9020"
+  persistence-courses-mongodb:
+    image: "mongo:3.4"
+    volumes:
+    - persistence-courses-mongodb-configdb:/data/configdb
+    - persistence-courses-mongodb-db:/data/db
+volumes:
+  persistence-courses-mongodb-configdb:
+  persistence-courses-mongodb-db:
