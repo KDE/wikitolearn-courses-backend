@@ -1,0 +1,10 @@
+version: '3'
+services:
+  persistence-courses-mongodb:
+    image: "mongo:3.4"
+    volumes:
+    - persistence-courses-mongodb-configdb:/data/configdb
+    - persistence-courses-mongodb-db:/data/db
+volumes:
+  persistence-courses-mongodb-configdb:
+  persistence-courses-mongodb-db:
