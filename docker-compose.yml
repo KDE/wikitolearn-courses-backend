@@ -5,7 +5,7 @@ services:
       context: ./src/
       args:
         SERVICE_PORT: ${SERVICE_PORT}
-    image: wikitolearn/courses-backend
+    image: "${DOCKER_REGISTRY}wikitolearn/courses-backend"
     ports:
     - "${SERVICE_PORT}:${SERVICE_PORT}"
     environment:
